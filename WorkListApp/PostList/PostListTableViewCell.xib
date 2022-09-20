@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="119" id="KGk-i7-Jjw" customClass="PostListTableViewCell" customModule="WorkListApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="370" height="119"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="370" height="119"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V4o-Hg-7is">
+                        <rect key="frame" x="8" y="16" width="354" height="103"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rka-H1-sXF">
+                                <rect key="frame" x="16" y="36.5" width="322" height="50.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kas-pI-rdh">
+                                <rect key="frame" x="16" y="8" width="322" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.74901960784313726" green="0.74901960784313726" blue="0.74901960784313726" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="kas-pI-rdh" secondAttribute="trailing" constant="8" id="0FX-cm-tHY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Rka-H1-sXF" secondAttribute="trailing" constant="8" id="AS2-F3-BkD"/>
+                            <constraint firstItem="Rka-H1-sXF" firstAttribute="leading" secondItem="V4o-Hg-7is" secondAttribute="leadingMargin" constant="8" id="Lei-QN-Pcq"/>
+                            <constraint firstItem="kas-pI-rdh" firstAttribute="top" secondItem="V4o-Hg-7is" secondAttribute="top" constant="8" id="SxB-XG-faN"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="e2X-OO-5xv"/>
+                            <constraint firstItem="Rka-H1-sXF" firstAttribute="top" secondItem="kas-pI-rdh" secondAttribute="bottom" constant="8" id="o5r-GF-vtB"/>
+                            <constraint firstItem="kas-pI-rdh" firstAttribute="leading" secondItem="V4o-Hg-7is" secondAttribute="leadingMargin" constant="8" id="rE3-qR-PDU"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="Rka-H1-sXF" secondAttribute="bottom" constant="8" id="wc0-cR-cVP"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="V4o-Hg-7is" secondAttribute="bottom" id="D2z-Vh-8nB"/>
+                    <constraint firstItem="V4o-Hg-7is" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="Va0-Dt-v7t"/>
+                    <constraint firstAttribute="trailing" secondItem="V4o-Hg-7is" secondAttribute="trailing" constant="8" id="ahA-eo-3Zl"/>
+                    <constraint firstItem="V4o-Hg-7is" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="zTO-yL-T1q"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="containerView" destination="V4o-Hg-7is" id="7ct-eD-lZc"/>
+                <outlet property="postDescLabel" destination="Rka-H1-sXF" id="nii-Oy-sYF"/>
+                <outlet property="postTitleLabel" destination="kas-pI-rdh" id="h8E-vj-rH6"/>
+            </connections>
+            <point key="canvasLocation" x="168.11594202898553" y="109.48660714285714"/>
+        </tableViewCell>
+    </objects>
+</document>
