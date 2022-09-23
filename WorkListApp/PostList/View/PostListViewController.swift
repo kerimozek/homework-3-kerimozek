@@ -18,21 +18,19 @@ class PostListViewController: UIViewController {
         super.viewDidLoad()
         
         setupUI()
-        viewModel.viewDelegate = self
-        viewModel.didViewLoad()
+
     }
 }
-
-
-
 
 // ------EXTENSIONS------ //
 
 private extension PostListViewController {
     func setupUI() {
-        tableView.delegate = self
         tableView.dataSource = self
+        tableView.delegate = self
+        viewModel.viewDelegate = self
         registerCell()
+        viewModel.didViewLoad()
     }
     func registerCell() {
         tableView.register(.init(nibName: "PostListTableViewCell", bundle: nil), forCellReuseIdentifier: "PostListTableViewCell")
@@ -45,22 +43,6 @@ extension PostListViewController: PostListViewModelViewProtocol {
         DispatchQueue.main.async {
             self.tableView.reloadData()
         }
-        
-    }
-    
-    func showEmptyView() {
-        
-    }
-    
-    func hideEmptyView() {
-        
-    }
-}
-
-extension PostListViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // TODO: details sayfasına git
-        viewModel.didClickItem(at: indexPath.row)
     }
 }
 
@@ -76,5 +58,11 @@ extension PostListViewController: UITableViewDataSource {
         cell.postTitleLabel.text = items[indexPath.row].title
         cell.postDescLabel.text = items[indexPath.row].desc
         return cell
+    }
+}
+
+extension PostListViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.backgroundColor = UIColor.clear
     }
 }
