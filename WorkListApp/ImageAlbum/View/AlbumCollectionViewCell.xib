@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,33 +16,21 @@
                 <rect key="frame" x="0.0" y="0.0" width="183" height="182"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pfc-H2-gBl">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="obY-SR-xBO">
                         <rect key="frame" x="0.0" y="0.0" width="183" height="182"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vmP-nF-F2o">
-                                <rect key="frame" x="4" y="4" width="175" height="174"/>
-                            </imageView>
-                        </subviews>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="vmP-nF-F2o" secondAttribute="trailing" constant="4" id="HNd-GX-50M"/>
-                            <constraint firstItem="vmP-nF-F2o" firstAttribute="leading" secondItem="Pfc-H2-gBl" secondAttribute="leading" constant="4" id="LBW-oS-qS7"/>
-                            <constraint firstAttribute="bottom" secondItem="vmP-nF-F2o" secondAttribute="bottom" constant="4" id="OkE-lF-TyF"/>
-                            <constraint firstItem="vmP-nF-F2o" firstAttribute="top" secondItem="Pfc-H2-gBl" secondAttribute="top" constant="4" id="aKg-0p-rRb"/>
-                        </constraints>
-                    </view>
+                    </imageView>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="Pfc-H2-gBl" secondAttribute="trailing" id="0UD-aX-cfW"/>
-                <constraint firstItem="Pfc-H2-gBl" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="5Hu-Qh-5Hr"/>
-                <constraint firstItem="Pfc-H2-gBl" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="gfJ-Nw-vdG"/>
-                <constraint firstAttribute="bottom" secondItem="Pfc-H2-gBl" secondAttribute="bottom" id="kHv-jp-DDj"/>
+                <constraint firstAttribute="trailing" secondItem="obY-SR-xBO" secondAttribute="trailing" id="EnO-Zo-y5E"/>
+                <constraint firstItem="obY-SR-xBO" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Pg4-qp-5B1"/>
+                <constraint firstItem="obY-SR-xBO" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="TSl-ed-9YR"/>
+                <constraint firstAttribute="bottom" secondItem="obY-SR-xBO" secondAttribute="bottom" id="hYD-IF-KX8"/>
             </constraints>
             <size key="customSize" width="183" height="182"/>
             <connections>
-                <outlet property="containerView" destination="Pfc-H2-gBl" id="W6r-7n-WiO"/>
-                <outlet property="imageView" destination="vmP-nF-F2o" id="8Jv-4K-gAZ"/>
+                <outlet property="imageView" destination="obY-SR-xBO" id="6bA-gi-ijc"/>
             </connections>
             <point key="canvasLocation" x="228.2608695652174" y="154.01785714285714"/>
         </collectionViewCell>

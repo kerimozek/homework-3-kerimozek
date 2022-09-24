@@ -17,7 +17,7 @@ class CoreDataStack {
         self.modelName = modelName
     }
     
-    
+    // Defining Container
     private lazy var storeContainer: NSPersistentContainer = {
         let container = NSPersistentContainer(name: modelName)
         container.loadPersistentStores { _, error in
@@ -29,26 +29,19 @@ class CoreDataStack {
         return container
     }()
     
-    
+    // Defining Context
     lazy var managedContext: NSManagedObjectContext = self.storeContainer.viewContext
     
+    // Function to Save Context
     func saveContext() {
         guard managedContext.hasChanges else {
             return
         }
         
         do {
-            try managedContext.save() 
-            print("kayıt1")
+            try managedContext.save()
         } catch let error as NSError {
             print(error.localizedDescription)
         }
     }
-    
-    
-    
-    
-    
-    
-    
 }

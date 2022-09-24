@@ -7,13 +7,14 @@
 
 import Foundation
 
-
+// Protocol for PostListViewModel
 protocol PostListViewModelViewProtocol: AnyObject {
     func didCellItemFetch(_ items: [PostCellViewModel])
 }
 
 class PostListViewModel {
     
+    //  Defining Constants and Vairables
     weak var viewDelegate: PostListViewModelViewProtocol?
     private let model = PostListModel()
     
@@ -22,12 +23,13 @@ class PostListViewModel {
         model.delegate = self
     }
     
-  func didViewLoad() {
+    func didViewLoad() {
         model.fetchData()
     }
     
 }
 
+// MARK: - EXTENSIONS - //
 private extension PostListViewModel {
     
     @discardableResult
@@ -50,7 +52,5 @@ extension PostListViewModel: PostListModelProtocol {
         } else {
             print("error")
         }
-        
-
     }
 }

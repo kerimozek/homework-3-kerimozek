@@ -7,6 +7,7 @@
 
 import Foundation
 
+// Protocol for PostListModel
 protocol PostListModelProtocol: AnyObject {
     func didDataFetchProcessFinish(_ isSuccess: Bool)
 }
@@ -14,10 +15,11 @@ protocol PostListModelProtocol: AnyObject {
 
 class PostListModel {
     
+    // Defining Constants and Variables
     weak var delegate: PostListModelProtocol?
-    
     var posts: [Post] = []
     
+    // Function for Fetching Data from API
     func fetchData() {
         
         guard let url = URL.init(string: "https://jsonplaceholder.typicode.com/posts") else {
@@ -51,7 +53,7 @@ class PostListModel {
                 return
                 
             }
-            
+            // Decoding Data
             do {
                 let jsonDecoder = JSONDecoder()
                 self.posts = try jsonDecoder.decode([Post].self, from: data)

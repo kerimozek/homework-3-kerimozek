@@ -13,6 +13,7 @@ protocol AlbumViewModelViewProtocol: AnyObject {
 
 class AlbumViewModel {
     
+    // Defining Constants and Variables
     weak var viewDelegate: AlbumViewModelViewProtocol?
     private let model = AlbumModel()
     
@@ -25,13 +26,9 @@ class AlbumViewModel {
         model.fetchData()
     }
     
-    func didClickItem(at index: Int){
-        
-    }
-    
-    
 }
 
+// Extension for MakeViewBasedModel Function
 private extension AlbumViewModel {
     
     @discardableResult

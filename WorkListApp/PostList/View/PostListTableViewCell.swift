@@ -9,6 +9,7 @@ import UIKit
 
 class PostListTableViewCell: UITableViewCell {
     
+    //  Defining Constants and Vairables
     @IBOutlet private(set) weak var containerView: UIView!
     @IBOutlet private(set) weak var postTitleLabel: UILabel!
     @IBOutlet private(set) weak var postDescLabel: UILabel!
@@ -17,7 +18,4 @@ class PostListTableViewCell: UITableViewCell {
         super.awakeFromNib()
         containerView.layer.cornerRadius = 8
     }
-    
-  
-    
 }

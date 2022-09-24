@@ -8,8 +8,8 @@
 import UIKit
 
 class WorkListCell: UITableViewCell {
-
     
+    // Defining Constants and Variables
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var imageDone: UIImageView!
@@ -19,7 +19,7 @@ class WorkListCell: UITableViewCell {
         super.awakeFromNib()
         
         
-       containerView.layer.cornerRadius = 5
+        containerView.layer.cornerRadius = 5
     }
     
 }

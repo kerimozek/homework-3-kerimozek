@@ -7,14 +7,14 @@
 
 import Foundation
 
-
+// Struct for PostCellViewModel
 struct PostCellViewModel {
     
     var title: String?
     var desc: String?
 }
 
-
+// Struct for API
 struct Post: Decodable {
     
     var id: Int

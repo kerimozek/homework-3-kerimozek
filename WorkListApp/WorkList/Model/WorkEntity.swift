@@ -7,11 +7,11 @@
 
 import Foundation
 
+// Struct for WorkEntity
 struct WorkEntity {
     
     var title: String?
     var detail: String?
     var isDone: Bool
-    var id: UUID?
-    
+    var id: UUID?  
 }

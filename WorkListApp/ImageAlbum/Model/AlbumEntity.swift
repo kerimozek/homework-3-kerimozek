@@ -7,7 +7,7 @@
 
 import Foundation
 
-
+// Struct for PhotoCellViewModel
 struct PhotoCellViewModel {
     
     var image: String?

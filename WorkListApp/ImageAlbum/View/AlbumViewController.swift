@@ -10,8 +10,8 @@ import Kingfisher
 
 class AlbumViewController: UIViewController {
     
+    //  Defining Constants and Vairables
     @IBOutlet weak var collectionView: UICollectionView!
-    
     private let viewModel = AlbumViewModel()
     private var items: [PhotoCellViewModel] = []
     
@@ -26,12 +26,14 @@ class AlbumViewController: UIViewController {
     }
 }
 
-// ------EXTENSIONS------ //
+// MARK: - EXTENSIONS - //
 
 private extension AlbumViewController {
+    
+    // Functions to run when ViewDidLoad is called
     func setupUI() {
-        collectionView.delegate = self
         collectionView.dataSource = self
+        collectionView.delegate = self
         registerCell()
     }
     func registerCell() {
@@ -39,6 +41,7 @@ private extension AlbumViewController {
     }
 }
 
+// Extension for AlbumViewModelViewProtocol
 extension AlbumViewController: AlbumViewModelViewProtocol {
     func didCellItemFetch(_ items: [PhotoCellViewModel]) {
         self.items = items
@@ -48,6 +51,7 @@ extension AlbumViewController: AlbumViewModelViewProtocol {
     }
 }
 
+// Extension for UICollectionViewDataSource
 extension AlbumViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -63,21 +67,14 @@ extension AlbumViewController: UICollectionViewDataSource {
     
 }
 
+// Extension for UICollectionViewDelegateFlowLayout
 extension AlbumViewController: UICollectionViewDelegateFlowLayout {
     
-    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: (collectionView.frame.width) / 4 , height: (collectionView.frame.height) / 7 )
-        //      return CGSize(width: ((collectionView.frame.width) - 16) / 4 , height: ((collectionView.frame.height) - 16) / 7 )
+        return CGSize(width: (collectionView.frame.width - 40) / 4 , height: (collectionView.frame.height - 40) / 7 )
+        
     }
-    
+
 }
 
-extension AlbumViewController: UICollectionViewDelegate {
-    
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("success")
-    }
-}
 

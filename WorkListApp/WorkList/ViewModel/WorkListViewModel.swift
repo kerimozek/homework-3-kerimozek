@@ -7,12 +7,14 @@
 
 import Foundation
 
+// Protocol for WorkListViewModel
 protocol WorkListViewModelProtocol: AnyObject {
     func didCellItemFetch(_ items: [WorkEntity])
 }
 
 class WorkListViewModel {
     
+    //  Defining Constants and Vairables
     weak var viewDelegate: WorkListViewModelProtocol?
     private let model = WorkListModel()
     
@@ -26,7 +28,6 @@ class WorkListViewModel {
     
 }
 
-
 // MARK: - WorkListModelProtocol
 
 extension WorkListViewModel: WorkListModelProtocol {
@@ -35,7 +36,7 @@ extension WorkListViewModel: WorkListModelProtocol {
             let posts = model.posts
             viewDelegate?.didCellItemFetch(posts)
         } else {
-            print("error 1")
+            print("error")
         }
     }
 }

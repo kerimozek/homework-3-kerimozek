@@ -10,14 +10,14 @@ import UIKit
 
 class AlbumCollectionViewCell: UICollectionViewCell {
 
-    @IBOutlet private(set) weak var containerView: UIView!
+    // Defining Constants and Variables
     @IBOutlet private(set) weak var imageView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
      
-        imageView.layer.cornerRadius = 15
+        imageView.layer.cornerRadius = imageView.frame.width / 15
       
     }
         

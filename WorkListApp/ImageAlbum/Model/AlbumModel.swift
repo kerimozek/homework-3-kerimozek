@@ -7,6 +7,7 @@
 
 import Foundation
 
+// Protocol for AlbumModel
 protocol AlbumModelProtocol: AnyObject {
     func didDataFetchProcessFinish(_ isSuccess: Bool)
 }
@@ -14,10 +15,11 @@ protocol AlbumModelProtocol: AnyObject {
 
 class AlbumModel {
     
+    // Defining Constants and Variables
     weak var delegate: AlbumModelProtocol?
-    
     var photos: [Photo] = []
     
+    // Function for Fetching Data from API
     func fetchData() {
         
         guard let url = URL(string: "https://jsonplaceholder.typicode.com/photos") else {
@@ -31,7 +33,6 @@ class AlbumModel {
             
             guard let self = self else {
                 return }
-            
             
             guard error == nil else {
                 self.delegate?.didDataFetchProcessFinish(false)
@@ -56,7 +57,7 @@ class AlbumModel {
                 return
                 
             }
-            
+            // Decoding Data
             do {
                 let jsonDecoder = JSONDecoder()
                 

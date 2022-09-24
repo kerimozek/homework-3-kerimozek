@@ -8,15 +8,18 @@
 import Foundation
 import CoreData
 
+// Protocol for WorkListModel
 protocol WorkListModelProtocol: AnyObject {
     func didGetDataFinish(_ isFinish: Bool)
 }
 
 class WorkListModel {
     
+    // Defining Constants and Variables
     weak var delegate: WorkListModelProtocol?
     var posts: [WorkEntity] = []
     
+    // Function to Get Data from CoreData
     func getData() {
         
         let fetchRequest: NSFetchRequest<WorksData> = WorksData.fetchRequest()
@@ -29,11 +32,9 @@ class WorkListModel {
                 WorkEntity(title: $0.title, detail: $0.detail, isDone: $0.done, id: $0.id)
             }
             self.delegate?.didGetDataFinish(true)
-            print("success fetch")
         } catch {
             self.delegate?.didGetDataFinish(false)
             print(error.localizedDescription)
         }
     }
-    
 }
