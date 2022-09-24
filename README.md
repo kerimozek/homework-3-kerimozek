@@ -1,17 +1,29 @@
-# HomWork-3
-3. Ödevimiz
+# FMSS-Homework-3
+    WORKLIST APP
+![screenshot](https://github.com/FMSS-IOS-Patika-Bootcamp/homework-3-kerimozek/blob/main/WorkListApp/Assets.xcassets/app3.png)
 
+## Description
+- There are 3 sections in Tabbar.
+- In the first section, the text is fetched with the API and displayed in the tableview.
+- In the second section, the image is fetched with the API and displayed in the collectionview.
+- The third section can be thought of as a simple 'todo' application. There is a tableview on the main screen and an 'add' button at the top right. There are 2 'textfields' on the page that opens when the 'add' button is pressed. The information entered there is saved to CoreData when the 'save' button is pressed. The data that saved in coredata is displayed in Tableview.
+- When you click on any 'row' saved in the Tableview, it goes to the detail page and the detail information appears there. When the 'done' button is pressed, it returns to the main page with tableview and the icon of that 'row' changes to 'done'.
 
-- Tab bar Controller olcak. En az 3 tane Tab olucak. 
-- İlk Tab'de TableView olucak ve bu TableView içerisinde https://jsonplaceholder.typicode.com/ linkindeki post'lar api kullanarak cekilip gösterilicek. ( SADECE URLSESSİON KULLANILICAKTIR.)
-- İkinci Tab'de CollectionView kullanılıcaktır.  https://jsonplaceholder.typicode.com/ linkindeki /photos'lar api kullanarak cekilip gösterilicek.
-- İmageler sadece KingsFisher kütüphanesi kullanılıar gösterilicektir. Başka kütüphane kabul edilmicektir. 
-- Cell yapısı kullanılar collectionView da gösterilicektir.
-- Grit yapısı oluşturularak CollectionView lar gösterilicektir. Aralarında boşluk birakilarak yapılırsa artı puan verilicek
-- Üçüncü tab'de Todo list gösterilicektir. Burdaki listeler CoreData dan alınıcaktır. Bu tab'de bir tane ekle butonu olucaktır.
-- Ekle butonuna basınca Yeni bir sayfaya geçiş yapılıcak ve bu sayfa Todo kaydedilicektir. Kayıt yapıldıktan sonra Todo list ekranına dönüş yapılmalıdır.
-- Yeni eklenen Todo Listenin en başında Gözükmelidir.
-- Todo'ların üstüne tıklanınca Detay sayfasına gidilicek, Bu sayfada Tamamlandı butonu olucak ve bu Butona tıklandığında Todo List sayfasına geri dönüş yapılıcaktır.
-- Tamamlandı butonuna basıldığı zaman, Todo List ekranında ilgili Todo Cellindeki image tick şaretine dönüşücektir.
+## Tools
 
- Arkadaşlar kolay gelsin :)
+- Swift 
+   - Delegate
+   - Navigation Controller
+   - POP
+   - OOP
+ 
+- UIKit
+   - CollectionView
+   - TableView
+ 
+- CoreData
+- URLSession
+
+     
+![screenshot](https://github.com/FMSS-IOS-Patika-Bootcamp/homework-3-kerimozek/blob/main/WorkListApp/Assets.xcassets/app2.png)
+![screenshot](https://github.com/FMSS-IOS-Patika-Bootcamp/homework-3-kerimozek/blob/main/WorkListApp/Assets.xcassets/app1.png)
